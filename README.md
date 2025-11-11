@@ -107,7 +107,7 @@ docker run -d -p 3000:3000 --name my-app tomfx/my-datathon-project:latest
 Configure the Firewall:
 Log in to the LinuxONE Community Cloud dashboard and add an Inbound Rule to your instance's Security Group to allow TCP traffic on port 3000 from source 0.0.0.0/0.
 
-Your application backend will now be accessible at http://your-server-ip:3000.
+Our application backend will now be accessible at http://your-server-ip:3000.
 
 Data Analysis with JupyterLab
 A JupyterLab environment can be run on the server to interact with the project's data and models.
@@ -122,11 +122,11 @@ docker run -p 38888:8888 --name notebook -v /home/linux1/shared:/home/jovyan/sha
   -d registry.linuxone.cloud.marist.edu/l1cc/jupyterlab-image-s390x:latest \
   jupyter lab --ServerApp.token='YourChosenPassword'
 ```
-Clone your repository into the shared volume:
+Clone our repository into the shared volume:
 ```
 cd /home/linux1/shared
 git clone [https://github.com/Tomfx03/IBM.git](https://github.com/Tomfx03/IBM.git)
 ```
 Configure Firewall: Add a new Security Group rule to allow TCP traffic on port 38888.
 
-You can now access your project files in JupyterLab at http://your-server-ip:38888.
+You can now access our project files in JupyterLab at http://your-server-ip:38888.
